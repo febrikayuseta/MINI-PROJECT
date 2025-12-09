@@ -16,9 +16,8 @@
       class="max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8"
     >
       <!-- Nav Bar / Top Bar -->
-      <section>
-        <header class="flex items-center justify-between p-4 bg-white shadow">
-          <h1 class="text-xl font-bold text-pink-700">Welcome to Bebyelle</h1>
+      <section class="flex items-center justify-between p-4 bg-white shadow">
+        <h1 class="text-xl font-bold text-pink-700">Welcome to Bebyelle</h1>
           <div class="flex gap-3">
             <!-- Icon Search-->
             <a href="/search" class="inline-block hover:text-pink-500">
@@ -70,10 +69,10 @@
               </svg>
             </a>
           </div>
-        </header>
-        <!-- Banner -->
-        <section class="mt-4">
-            <div class="grid w-full h-40 sm:h-56 md:h-72 rounded-xl shadow-md overflow-hidden">
+        </section>
+      <!-- Banner -->
+      <section class="mt-4">
+        <div class="grid w-full h-40 sm:h-56 md:h-72 rounded-xl shadow-md overflow-hidden">
                  <img
                     src="./images/banner.png"
                     alt="Banner Bebyelle Coffee"
@@ -85,8 +84,30 @@
                 </div>
             </div>
       </section>
-      <section>
-        
+      <!-- Category Menu -->
+      <section class="mt-6">
+          <div class="flex gap-3 px-4 overflow-x-auto">
+            <a href="/coffee"
+              class="px-3 py-1.5 bg-pink-100 rounded-full text-sm hover:bg-pink-200
+                      sm:px-4 sm:py-2
+                      md:px-5 md:py-2.5 md:text-base">Coffee</a>
+
+            <a href="/non-coffee"
+              class="px-3 py-1.5 bg-pink-100 rounded-full text-sm whitespace-nowrap hover:bg-pink-200
+                      sm:px-4 sm:py-2
+                      md:px-5 md:py-2.5 md:text-base">Non-Coffee</a>
+
+            <a href="/food"
+              class="px-3 py-1.5 bg-pink-100 rounded-full text-sm hover:bg-pink-200
+                      sm:px-4 sm:py-2
+                      md:px-5 md:py-2.5 md:text-base">Food</a>
+
+            <a href="/pastry"
+              class="px-3 py-1.5 bg-pink-100 rounded-full text-sm hover:bg-pink-200
+                      sm:px-4 sm:py-2
+                      md:px-5 md:py-2.5 md:text-base">Pastry</a>
+          </div>
+        </section>
       </section>
     </main>
   </body>
