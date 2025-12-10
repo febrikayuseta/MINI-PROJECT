@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Status</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-primary: #ee2b8c;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <section class="min-h-screen flex items-center justify-center p-4">
+      <!-- Box Wrapper -->
+      <div
+        class="relative bg-white w-full max-w-sm rounded-2xl shadow-xl p-6 sm:p-8"
+      >
+        <!-- Close Button X -->
+        <button
+          class="absolute right-4 top-4 text-gray-400 hover:text-gray-600"
+        >
+          <a href="index.html">✕</a>
+        </button>
+
+        <!-- Icon Successs -->
+        <div class="flex justify-center mb-4">
+          <div
+            class="w-20 h-20 rounded-full bg-pink-200 flex items-center justify-center"
+          >
+            <div
+              class="w-14 h-14 rounded-full bg-pink-500 flex items-center justify-center animate-pulse"
+            >
+              <span class="text-white text-3xl font-bold animate-pulse">✓</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Status Order -->
+        <h2 class="text-center text-2xl font-bold text-gray-800">
+          Order Placed!
+        </h2>
+        <p class="text-center text-gray-500 mt-1">
+          Your order is confirmed and our baristas are on it.
+        </p>
+
+        <!-- Info Box -->
+        <div class="border rounded-xl p-4 mt-6 space-y-3">
+          <div class="flex justify-between text-sm">
+            <p class="text-gray-500 font-semibold">ORDER NUMBER</p>
+            <p class="text-gray-800 font-bold">#BYL001</p>
+          </div>
+
+          <div class="flex justify-between text-sm">
+            <p class="text-gray-500 font-semibold">ESTIMATED PREP TIME</p>
+            <p class="text-gray-800 font-bold">5–7 Minutes</p>
+          </div>
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="mt-8 space-y-3">
+          <a
+            href="/order-details.html"
+            class="block w-full text-center bg-pink-200 hover:bg-pink-300 text-pink-700 font-semibold py-3 rounded-xl"
+          >
+            View Order Details
+          </a>
+
+          <a
+            href="/index.html"
+            class="block w-full text-center bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 rounded-xl"
+          >
+            Done
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
