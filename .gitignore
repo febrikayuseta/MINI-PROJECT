@@ -1,8 +1,5 @@
 node_modules/
 dist/
 .env
-.MINI-PROJECT
+.index.js
 
-nama: Febrika Yuseta
-FE 25
-Mini Project
