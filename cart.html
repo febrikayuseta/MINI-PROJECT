@@ -7,8 +7,28 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
       @theme {
-        --color-primary: #ee2b8c;
-      }
+  --color-primary: #ee2b8c;
+}
+
+/* order list item */
+.order-item {
+  @apply flex justify-between bg-gray-50 p-3 md:p-4 rounded-lg;
+}
+
+/* payment method label */
+.payment-option {
+  @apply flex justify-between p-3 md:p-4 border rounded-xl cursor-pointer;
+}
+
+/* payment option left content */
+.payment-option-left {
+  @apply flex items-center gap-3 md:gap-4;
+}
+
+/* radio input */
+.radio-input {
+  @apply w-5 h-5;
+}
     </style>
   </head>
   <body class="bg-gray-100 font-sans">
@@ -47,7 +67,7 @@
 
       <!-- Order List-->
       <section class="space-y-3">
-        <div class="flex justify-between bg-gray-50 p-3 md:p-4 rounded-lg">
+        <div class="order-item">
           <div>
             <p class="font-medium md:text-lg">Caramel Latte</p>
             <p class="text-sm text-gray-500 md:text-base">2× Rp 42.000</p>
@@ -55,7 +75,7 @@
           <p class="font-semibold md:text-lg">Rp 84.000</p>
         </div>
 
-        <div class="flex justify-between bg-gray-50 p-3 md:p-4 rounded-lg">
+        <div class="order-item">
           <div>
             <p class="font-medium md:text-lg">Butter Croissant</p>
             <p class="text-sm text-gray-500 md:text-base">1× Rp 42.000</p>
@@ -89,9 +109,8 @@
         <div class="space-y-3">
           <!-- Cash -->
           <label
-            class="flex justify-between p-3 md:p-4 border rounded-xl cursor-pointer hover:bg-gray-5"
-          >
-            <div class="flex items-center gap-3 md:gap-4">
+            class="payment-option hover:bg-gray-50">
+            <div class="payment-option-left">
               <span class="text-pink-600 text-xl md:text-2xl">
                 <svg
                   class="w-6 h-6"
@@ -132,14 +151,13 @@
               </span>
               <span class="md:text-lg">Cash</span>
             </div>
-            <input type="radio" name="payment" class="w-5 h-5" />
+            <input type="radio" class="radio-input" />
           </label>
 
           <!-- QRIS -->
           <label
-            class="flex justify-between p-3 md:p-4 border rounded-xl cursor-pointer hover:bg-gray-5"
-          >
-            <div class="flex items-center gap-3 md:gap-4">
+            class="payment-option hover:bg-gray-50">
+            <div class="payment-option-left">
               <span class="text-pink-600 text-xl md:text-2xl"
                 ><svg
                   class="w-6 h-6"
@@ -165,19 +183,13 @@
               </span>
               <span class="md:text-lg">QRIS</span>
             </div>
-            <input
-              checked
-              type="radio"
-              name="payment"
-              class="w-5 h-5"
-            />
+            <input type="radio" class="radio-input" />
           </label>
 
           <!-- Card -->
           <label
-            class="flex justify-between p-3 md:p-4 border rounded-xl cursor-pointer hover:bg-gray-50"
-          >
-            <div class="flex items-center gap-3 md:gap-4">
+            class="payment-option hover:bg-gray-50">
+            <div class="payment-option-left">
               <span class="text-pink-500 text-xl md:text-2xl">
                 <svg class="w-6 h-6"
                   fill="#000000"
@@ -226,7 +238,7 @@
               </span>
               <span class="md:text-lg">Debit/Credit Card</span>
             </div>
-            <input type="radio" name="payment" class="w-5 h-5" />
+            <input type="radio" class="radio-input" />
           </label>
         </div>
       </section>

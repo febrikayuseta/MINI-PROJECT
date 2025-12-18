@@ -6,9 +6,20 @@
     <title>Payment Status</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/tailwindcss">
-      @theme {
-        --color-primary: #ee2b8c;
-      }
+@theme {
+  --color-primary: #ee2b8c;
+}
+
+
+/* info row */
+.info-row {
+  @apply flex justify-between text-sm;
+}
+
+/* base button */
+.btn-base {
+  @apply block w-full text-center font-semibold py-3 rounded-xl;
+}
     </style>
   </head>
   <body class="bg-gray-100 font-sans">
@@ -44,12 +55,12 @@
 
         <!-- Info Box -->
         <div class="border rounded-xl p-4 mt-6 space-y-3">
-          <div class="flex justify-between text-sm">
+          <div class="info-row">
             <p class="text-gray-500 font-semibold">ORDER NUMBER</p>
             <p class="text-gray-800 font-bold">#BYL001</p>
           </div>
 
-          <div class="flex justify-between text-sm">
+          <div class="info-row">
             <p class="text-gray-500 font-semibold">ESTIMATED PREP TIME</p>
             <p class="text-gray-800 font-bold">5–7 Minutes</p>
           </div>
@@ -58,15 +69,13 @@
         <!-- BUTTONS -->
         <div class="mt-8 space-y-3">
           <a
-            href="/order-details.html"
-            class="block w-full text-center bg-pink-200 hover:bg-pink-300 text-pink-700 font-semibold py-3 rounded-xl"
-          >
+            href="cart.html"
+            class="btn-base bg-pink-200 hover:bg-pink-300 text-pink-700">
             View Order Details
           </a>
           <a
-            href="/index.html"
-            class="block w-full text-center bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 rounded-xl"
-          >
+            href="index.html"
+            class="btn-base bg-pink-200 hover:bg-pink-300 text-pink-700">
             Done
           </a>
         </div>
