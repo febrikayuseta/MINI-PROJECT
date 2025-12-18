@@ -9,6 +9,26 @@
       @theme {
         --color-primary: #ee2b8c;
       }
+
+      /* tombol + */
+      .btn-add {
+        @apply absolute bottom-2 right-2 bg-primary text-white
+         w-8 h-8 rounded-full flex items-center justify-center;
+      }
+
+      /* gambar produk */
+      .product-img {
+        @apply rounded-xl w-full aspect-square object-cover;
+      }
+
+      /* card produk (wrapper teks) */
+      .product-title {
+        @apply font-semibold mt-1;
+      }
+
+      .product-price {
+        @apply text-gray-600 text-sm;
+      }
     </style>
   </head>
   <body class="bg-gray-100 font-sans">
@@ -83,8 +103,14 @@
           <div
             class="absolute col-start-1 row-start-1 self-end p-4 text-white drop-shadow-lg"
           >
-            <p class="text-md sm:text-xl font-semibold lg:text-lg lg:text-white">Try our new</p>
-            <h3 class="text-2xl sm:text-3xl font-extrabold md:text-4xl font-extrabold lg:text-5xl lg:text-white">
+            <p
+              class="text-md sm:text-xl font-semibold lg:text-lg lg:text-white"
+            >
+              Try our new
+            </p>
+            <h3
+              class="text-2xl sm:text-3xl font-extrabold md:text-4xl font-extrabold lg:text-5xl lg:text-white"
+            >
               Strawberry Matcha!
             </h3>
           </div>
@@ -125,93 +151,86 @@
         <div>
           <div class="relative">
             <img
-              src="/images/menu1.png"
+              src="./images/menu1.png"
               alt="Caramel Latte"
-              class="rounded-xl w-full aspect-square object-cover"
-            />
+              class="product-img"/>
             <button
               onclick="alert('Ditambahkan ke cart!')"
-              class="absolute bottom-2 right-2 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center"
-            >
+              class="btn-add">
               +
             </button>
           </div>
-          <p class="font-semibold mt-1">Caramel Latte</p>
-          <p class="text-gray-600 text-sm">Rp.42.000</p>
+          <p class="product-title">Caramel Latte</p>
+          <p class="product-price">Rp.42.000</p>
         </div>
 
         <!-- Product 2 -->
         <div>
           <div class="relative">
             <img
-              src="/images/menu2.png"
+              src="./images/menu2.png"
               alt="Butter Croissant"
-              class="rounded-xl w-full aspect-square object-cover"
-            />
+              class="product-img"/>
             <button
               onclick="alert('Ditambahkan ke cart!')"
-              class="absolute bottom-2 right-2 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center"
-            >
+              class="btn-add">
               +
             </button>
           </div>
-          <p class="font-semibold mt-1">Butter Croissant</p>
-          <p class="text-gray-600 text-sm">Rp. 40.000</p>
+          <p class="product-title">Butter Croissant</p>
+          <p class="product-price">Rp. 40.000</p>
         </div>
 
         <!-- Product 3 -->
         <div>
           <div class="relative">
             <img
-              src="/images/menu3.png"
+              src="./images/menu3.png"
               alt="Strawberry Matcha"
-              class="rounded-xl w-full aspect-square object-cover"
-            />
+              class="product-img"/>
             <button
               onclick="alert('Ditambahkan ke cart!')"
-              class="absolute bottom-2 right-2 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center"
-            >
+              class="btn-add">
               +
             </button>
           </div>
-          <p class="font-semibold mt-1">Strawberry Matcha</p>
-          <p class="text-gray-600 text-sm">Rp. 50.000</p>
+          <p class="product-title">Strawberry Matcha</p>
+          <p class="product-price">Rp. 50.000</p>
         </div>
 
         <!-- Product 4 -->
         <div>
           <div class="relative">
             <img
-              src="/images/menu4.png"
+              src="./images/menu4.png"
               alt="Iced Americano"
-              class="rounded-xl w-full aspect-square object-cover"
-            />
+              class="product-img"/>
             <button
               onclick="alert('Ditambahkan ke cart!')"
-              class="absolute bottom-2 right-2 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center"
-            >
+              class="btn-add">
               +
             </button>
           </div>
-          <p class="font-semibold mt-1">Iced Americano</p>
-          <p class="text-gray-600 text-sm">Rp. 46.000</p>
+          <p class="product-title">Iced Americano</p>
+          <p class="product-price">Rp. 46.000</p>
         </div>
       </div>
       <!-- BUTTON + BOTTOM NAV -->
-      <div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg">
-        <!-- Button Show All -->
-        <div class="p-4">
-          <button
-            id="show-all"
-            class="w-full bg-primary text-white py-3 rounded-full text-base font-medium"
-          >
-            Show All
-          </button>
-        </div>
+      <div class="fixed bottom-0 left-0 right-0">
+          <div
+              class="max-w-screen-sm sm:max-w-screen-md md:max-w-screen-lg lg:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8"
+            >
+      <div class="bg-white shadow-lg rounded-t-xl">
+      <!-- Button Show All -->
+      <div class="p-4">
+        <button class="w-full bg-primary text-white py-3 rounded-full">
+          Show All
+         </button>
+      </div>
 
         <!-- Bottom Navigation -->
-        <nav class="flex justify-around border-t py-3 text-gray-500 text-sm">
-          <!-- Tombol Home -->
+      <nav class="flex justify-around border-t py-3 text-gray-500 text-sm">
+        <!-- Tombol Home -->
           <a href="index.html" class="flex flex-col items-center text-primary">
             <svg
               class="w-5 h-6"
@@ -237,7 +256,8 @@
 
           <!--Tombol Orders -->
           <a href="cart.html" class="flex flex-col items-center">
-            <svg class="w-6 h-6"
+            <svg
+              class="w-6 h-6"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
